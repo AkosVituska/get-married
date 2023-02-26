@@ -1,3 +1,42 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
 *{
   box-sizing: border-box;
 }
@@ -8,34 +47,39 @@ body {
   line-height: 1.2rem;
   font-size: 1.25rem;
 }
-h1 {
-  font-family:'Great Vibes', cursive;
+h1, h2 {
+  font-family: 'Great Vibes', cursive; 
 }
-
-#head {
+/*header*/
+#container-1 {
   background: url(https://orange.codeberryschool.com/content/images/project-assets/wedding-landing-cover.jpg)70% center/cover no-repeat; 
   text-align: center;
-  flex-flow: column;
   display: table;
   width: 100%;
   height: 100vh;
   
 }
-.head-married {
+.header {
   display: table-cell;
   vertical-align: middle;
 }
-.head-married-names {
-  margin: 0 auto 0; 
+.header-text {
+  margin: 0 auto ; 
   color: hsla(0,0%,100%,.9);
   padding: .750rem;
   background: hsla(100,0%,0%,.6);
 }
-.getting-married-text  {
+.header-text h1 {
+  font-size: 3.3rem;
+  color: #d2ba87;
+  padding-bottom: 1.2rem;
+}
+.getting-married {
+  padding-bottom: 1.2rem;
   font-size: 1.3rem;
   letter-spacing: .15rem;
 }
-.getting-married-text::after {
+.getting-married::after {
   display: block;
   content: "";
   background-color: #fff;
@@ -44,19 +88,13 @@ h1 {
   width: 11rem;
   margin: 0.5rem auto;
 }
-.head-married-names h1 {
-  font-size: 3.3rem;
-  color: #d2ba87;
-  font-family:'Great Vibes', cursive;
-  padding: .75rem 0;
-}
+
 .date {
   vertical-align: middle;
   letter-spacing: .12rem;
   font-size: 1.3rem;
   
 }
-
 .date::before,
 .date::after {
   display: inline-block;

@@ -45,20 +45,19 @@ body {
   background: url(https://orange.codeberryschool.com/content/images/project-assets/wedding-landing-background.png);
   color:  #444349;
   font-family: 'Libre Baskerville', serif;
-  font-size: 1.1rem; 
+  font-size: 1.2rem; 
 }
 h1, h2 {
   font-size: 2.8rem;
-  font-family: 'Great Vibes', cursive; 
+  font-family: 'Great Vibes', cursive;
 }
 h3{
+  font-family: 'Libre Baskerville', serif;
   font-size: 1.3rem;
 }
 img {
   margin-top: 1.2rem;
 }
-
-
 /* =============================
 
   Header design
@@ -69,7 +68,7 @@ img {
   text-align: center;
   display: flex;
   align-items: center;
-  width: 100vw;
+  width: 100%;
   height: 100vh;
 }
 .header {
@@ -77,11 +76,24 @@ img {
   flex-direction: column;
   background: hsla(100,0%,0%,.6);
   color: hsla(0,0%,100%,.9);
-  width: 100%;
+  width: 100vw;
   padding: .55rem 0rem;
+}
+@media (min-width: 768px) {
+  .header {
+    display: flex;
+  flex-direction: column;
+  background: hsla(100,0%,0%,.6);
+  color: hsla(0,0%,100%,.9);
+  width: 40%;
+  margin: 0 auto;
+  padding: 1rem;
+    
+  }  
 }
 .getting-married h3 {
   letter-spacing: .15rem;
+  
 }
 .getting-married::after {
   display: block;
@@ -97,7 +109,7 @@ img {
 }
 .name h1 {
   color: #d2ba87;
-  font-size: 3.5rem; 
+  font-size: 3.8rem; 
 }
 .date {
   padding-top: .55rem;
@@ -116,10 +128,10 @@ img {
   vertical-align: middle;
   margin: 0 .5rem;
 }
-
 /* =============================
 
   Main
+
   Locations design
 
 =============================*//
@@ -130,7 +142,7 @@ img {
 }
 .locations {
   text-align: center;
-  margin-top: 2rem;
+  margin-top: 1.2rem;
 }
 .locations-picture {
   margin-top: 1.2rem;
@@ -149,8 +161,17 @@ img {
   width: 6rem;
   margin: 1.2rem auto;
 }
-
-
+@media (min-width: 768px){
+  .locations-all {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;  
+    margin-bottom: 1.2rem; 
+  }
+  .picture-text::after {
+    display: none;
+  }
+}
 /* =============================
 
   Program design
@@ -160,21 +181,24 @@ img {
   background: hsla(100,0%,0%,.6);
   color: #d2ba87 ;
   font-family: 'Muli', sans-serif; 
-  padding: 1rem ;
+  padding: 1.2rem ;
   text-align: center;
 }
 .program h2{
-  padding-bottom: 1rem;
+  padding-bottom: 1.2rem;
 }
 .table  {
   text-align: left;
 }
+@media (min-width: 768px){
+  .table  {
+    text-align: center;
+  }
+}
 .table p {
   font-style: italic;
-  padding-bottom: 1rem;
+  padding-bottom: 1.2rem;
 }
-
-
 /* =============================
 
   Gifts design
@@ -182,13 +206,11 @@ img {
 =============================*/
 .gifts {
   text-align: center;
-  padding: 1rem;
+  padding: 1.2rem;
 }
 .gifts p {
-  padding: 1.5rem;
+  padding: 1.2rem;
 }
-
-
 /* =============================
 
  Questions/Answers design
@@ -197,7 +219,81 @@ img {
 .questions {
   background: hsla(100,0%,0%,.6);
   color: #d2ba87 ;
-  padding: 1rem;
+  padding: 1.2rem;
+  text-align: left;
+  font-family: 'Muli', sans-serif; 
+}
+.questions h2{
+  text-align: center;
+
+}
+.question-group h3 {
+  margin: 1.2rem 0;
   text-align: center;
 }
+.question-group::after {
+  content: "";
+  display: block;
+  height: .15rem;
+  width: 12.5rem;
+  margin: 1.350rem auto;
+  background-color: #d2ba87;
+}
+@media (min-width: 768px){
+  .questions-all {
+   display: flex;
+   justify-content: center;
+   text-align: left;
+   flex-direction: row;
+  }
+  .questions h2{
+   text-align: center;
+  }
+  .question-group h3 {
+    text-align: left;
+   
+  }
+  .question-group::after {
+    display: none;
+   
+  }
+ }
+.quest {
+  font-weight: 700;
+}
+.answer {
+  margin: 1.2rem 0;
+}
+a {
+  text-decoration: none;
+  color: #bd806e;
+}
+/* =============================
 
+ Contact design
+
+=============================*/
+.contact {
+  
+  text-align: center;
+  padding: 1.2rem;
+}
+.contact h2 {
+  margin: 1.2rem 0;
+}
+.contact p {
+  margin: 1.rem;
+}
+/* =============================
+
+ Footer design
+
+=============================*/
+#and {
+  background: hsla(100,0%,0%,.6);
+  padding: 1rem;
+  color: #fff;
+  font-weight: 700;
+  font-family: 'Muli', sans-serif; 
+  text-align: center;
+}
